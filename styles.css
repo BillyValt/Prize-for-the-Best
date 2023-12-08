@@ -28,6 +28,7 @@
   justify-content: center;
   top: 0px;
   margin: 30px 0 20px 0;
+  box-sizing: border-box;
 }
 
 .header>div {
@@ -274,12 +275,12 @@ footer {
   }
 
   .unicorn-img {
-    width: 70px;
+    width: 60px;
   }
 
   .title {
     font-family: Pixelify Sans;
-    font-size: 28px;
+    font-size: 26px;
     text-align: left;
   }
 
