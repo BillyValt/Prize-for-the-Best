@@ -1,0 +1,101 @@
+.settings-general {
+  height: 1000px;
+}
+
+.demo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winner__container::before {
+  display: none;
+}
+
+.winner__container::after {
+  display: none;
+}
+
+.checkbox-settings {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  accent-color: rgb(135, 124, 255);
+  cursor: pointer;
+
+}
+
+.saved_notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 170px;
+  height: 40px;
+  background-color: #ee82ee;
+  color: azure;
+  top: -40px;
+  font-size: 22px;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  width: clamp(360px, 50vw, 500px);
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 56px;
+  /* width: clamp(170px, 17vw, 700px); */
+  width: 100%;
+  font-size: 17.5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 18px;
+  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  padding: 7px 7px 7px 12px;
+}
+
+.participant-name {
+  max-width: 141px;
+}
+
+.card>input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .list-container {
+    width: clamp(290px, 66vw, 600px);
+  }
+
+  .winner__container {
+    width: clamp(290px, 66vw, 600px);
+  }
+
+  .card {
+    font-size: 16.5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 18px;
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
+  }
+
+  .participant-name {
+    max-width: 90px;
+  }
+}
