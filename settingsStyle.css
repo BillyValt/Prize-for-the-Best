@@ -79,7 +79,7 @@
   height: 15px;
   cursor: pointer;
   box-sizing: border-box;
-  accent-color: rgb(149, 149, 149);
+  accent-color: black;
 }
 
 @media (max-width: 600px) {
