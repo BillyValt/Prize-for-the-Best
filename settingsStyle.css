@@ -22,7 +22,7 @@
   width: 20px;
   height: 20px;
   margin-left: 10px;
-  accent-color: rgb(135, 124, 255);
+  accent-color: black;
   cursor: pointer;
 
 }
@@ -34,7 +34,7 @@
   position: absolute;
   width: 170px;
   height: 40px;
-  background-color: #ee82ee;
+  background-color: gray;
   color: azure;
   top: -40px;
   font-size: 22px;
