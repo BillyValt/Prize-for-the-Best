@@ -13,10 +13,6 @@ let savedDemoIsOn = JSON.parse(localStorage.getItem('setting'));
 let winner;
 let wishWinner = chosenWinner[0].personName;
 
-console.log(wishWinner);
-
-console.log(savedDemoIsOn);
-
 // ======== Index Javascrpt ========
 function pickWinner() {
   let personTotalNumber = participants.length;
@@ -42,7 +38,6 @@ function pickWinner() {
     winnerNameEl.classList.add('winner-name-animation');
 
     winnerNameEl.innerHTML = `${randomName}`;
-    console.log(randomName);
 
   }, 70);
 
