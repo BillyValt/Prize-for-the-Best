@@ -38,8 +38,6 @@ export const participants = [{
 
 //==== chosenWinner ====
 export const chosenWinner = [{
-  personName: localStorage.getItem('chosenWinner') || 'Соколова Валерия',
-  id: '6'
+  personName: localStorage.getItem('chosenWinner') || 'Макаренко Ксения',
+  id: '12'
 }];
-
-console.log(localStorage.getItem('chosenWinner'));
