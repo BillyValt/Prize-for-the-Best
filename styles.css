@@ -232,7 +232,7 @@ footer {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  bottom: 10px;
+  top: 690px;
   left: 40px;
   right: 40px;
   color: azure;
