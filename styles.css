@@ -43,8 +43,8 @@
 
 .title {
   font-family: Pixelify Sans, Arial, Helvetica, sans-serif;
-  color: rgb(165, 218, 58);
-  font-size: clamp(40px, 5.4svw, 50px);
+  color: rgb(170, 255, 0);
+  font-size: clamp(40px, 5.9svw, 50px);
   text-align: center;
   width: max-content;
   text-shadow: 0 0px 10px rgb(53, 0, 187);
@@ -108,9 +108,9 @@
   display: block;
   width: 0;
   height: 0;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  border-left: 22px solid;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 25px solid rgb(195, 0, 0);
   position: absolute;
   top: 50%;
   left: 0px;
@@ -122,9 +122,9 @@
   display: block;
   width: 0;
   height: 0;
-  border-top: 16px solid transparent;
-  border-bottom: 16px solid transparent;
-  border-right: 22px solid;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 25px solid rgb(195, 0, 0);
   position: absolute;
   top: 50%;
   right: 0px;
@@ -146,24 +146,6 @@
     transform: translateY(17px);
   }
 }
-
-/* @keyframes anime1 {
-  0% {
-    transform: translateY(-31px);
-  }
-
-  33% {
-    transform: translateY(17px);
-  }
-
-  66% {
-    transform: translateY(-31px);
-  }
-
-  100% {
-    transform: translateY(17px);
-  }
-} */
 
 .winner__incription {
   font-size: 16px;
@@ -229,7 +211,7 @@
 }
 
 .reset__btn {
-  background-color: rgb(255, 40, 40);
+  background-color: rgb(195, 0, 0);
   width: 100px;
   height: 40px;
   font-size: 17px;
@@ -280,7 +262,7 @@ footer {
 
   .title {
     font-family: Pixelify Sans;
-    font-size: 26px;
+    font-size: 29px;
     text-align: left;
   }
 
