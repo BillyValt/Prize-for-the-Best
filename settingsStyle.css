@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(55, 55, 55);
+  color: rgb(149, 149, 149);
 }
 
 .winner__container::before {
@@ -58,10 +60,10 @@
   justify-content: space-between;
   position: relative;
   height: 56px;
-  /* width: clamp(170px, 17vw, 700px); */
   width: 100%;
   font-size: 17.5px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(55, 55, 55);
+  color: rgb(149, 149, 149);
   border-radius: 18px;
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
@@ -77,6 +79,7 @@
   height: 15px;
   cursor: pointer;
   box-sizing: border-box;
+  accent-color: rgb(149, 149, 149);
 }
 
 @media (max-width: 600px) {
@@ -90,7 +93,6 @@
 
   .card {
     font-size: 16.5px;
-    background-color: rgb(255, 255, 255);
     border-radius: 18px;
     box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
   }
