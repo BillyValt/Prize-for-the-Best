@@ -1,12 +1,11 @@
-.settings-general {
-  height: 1000px;
-}
+/* .settings-general {
+} */
 
 .demo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(67, 67, 67);
   color: rgb(149, 149, 149);
 }
 
@@ -24,7 +23,6 @@
   margin-left: 10px;
   accent-color: black;
   cursor: pointer;
-
 }
 
 .saved_notification {
@@ -36,16 +34,30 @@
   height: 40px;
   background-color: gray;
   color: azure;
-  top: -40px;
+  top: 400px;
   font-size: 22px;
   border-radius: 10px;
   visibility: hidden;
+}
+
+.buttons__container {
+  padding: 0px;
+}
+
+/*Save button in this file*/
+.start__btn {
+  background-color: gray;
+}
+
+.start__btn:active {
+  background-color: rgb(67, 67, 67);
 }
 
 .list-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px 10px;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: clamp(360px, 50vw, 500px);
@@ -62,7 +74,7 @@
   height: 56px;
   width: 100%;
   font-size: 17.5px;
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(67, 67, 67);
   color: rgb(149, 149, 149);
   border-radius: 18px;
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
@@ -79,8 +91,9 @@
   height: 15px;
   cursor: pointer;
   box-sizing: border-box;
-  accent-color: black;
+  accent-color: rgb(170, 255, 0);
 }
+
 
 @media (max-width: 600px) {
   .list-container {
