@@ -12,7 +12,8 @@
   /* background: linear-gradient(0deg, #ffff8f, #ec9e69, #d56073, #7a4579); */
   overflow: hidden;
   font-family: Roboto, sans-serif, Arial, Helvetica;
-  width: 100svw;
+  width: 100vw;
+  width: 100dvw;
   height: 800px;
   min-width: 360px;
   max-width: 100%;
@@ -34,10 +35,11 @@
 .header>div {
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 }
 
 .unicorn-img {
-  width: 110px;
+  width: 90px;
   user-select: all;
 }
 
@@ -52,8 +54,8 @@
 
 .title2 {
   color: azure;
-  text-align: left;
-  font-size: 27px;
+  text-align: center;
+  font-size: 26px;
   position: relative;
 }
 
@@ -84,7 +86,7 @@
   margin-bottom: 20px;
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
   padding-top: 10px;
-  
+
   /* background-color: rgb(170, 255, 0); */
 }
 
@@ -242,9 +244,10 @@ footer {
 @media (max-width: 584px) {
   .header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px 0 20px 0;
+    margin: 20px 0 20px 0;
   }
 
   .winner__container {
@@ -257,16 +260,16 @@ footer {
   }
 
   .unicorn-img {
-    width: 60px;
+    width: 90px;
   }
 
   .title {
     font-family: Pixelify Sans;
-    font-size: 27.6px;
+    font-size: 33px;
     text-align: left;
   }
 
   .title2 {
-    font-size: 19px;
+    font-size: 18.5px;
   }
 }
