@@ -4,12 +4,14 @@ const saveButton = document.querySelector('.save-button-js');
 let settingsCheckboxEl = document.querySelector('.settings-checkbox-js');
 const savedNotif = document.querySelector('.saved_notification');
 const listContainerEl = document.querySelector('.js-list-container');
+
 //===Winner variable when  when choosing radio button===
 let winnerNameChanged;
 
 
 export let savedDemoIsOn = JSON.parse(localStorage.getItem('setting'));
 let timerId;
+let timerId1;
 
 let checkboxStatement = settingsCheckboxEl.checked = savedDemoIsOn;
 
@@ -40,10 +42,9 @@ function generatingCards() {
     const name = participant.personName;
 
     const isChecked = name === chosenWinner[0].personName;
-    
 
     listContainerEl.innerHTML += `
-      <div class="card">
+      <div class="card js-card" data-person-name="${participant.personName}">
         <div class="participant-name">
           ${name}
         </div>
@@ -57,14 +58,12 @@ function generatingCards() {
   const radioEl = document.querySelectorAll('.js-radio');
 
 
-
   radioEl.forEach(radioBtn => {
     radioBtn.addEventListener('click', () => {
       // console.log(radioBtn.dataset.personName);
 
       if (radioBtn.checked) {
         chosenWinner[0].personName = radioBtn.dataset.personName;
-
       }
 
       console.log(chosenWinner[0].personName);
@@ -75,6 +74,51 @@ function generatingCards() {
 // console.log(isChecked);
 
 generatingCards();
+
+function markRed(card, index) {
+  if (card.classList.contains('is-card-marked')) {
+    card.classList.remove('is-card-marked')
+
+    localStorage.removeItem(`cardColor${index}`);
+  } else {
+    card.classList.add('is-card-marked')
+
+    localStorage.setItem(`cardColor${index}`, 'is-card-marked');
+  }
+}
+
+const cardEl = document.querySelectorAll('.js-card');
+
+cardEl.forEach((card, index) => {
+  const storedClass = localStorage.getItem(`cardColor${index}`);
+
+  if (storedClass) { card.classList.add(storedClass) };
+
+  //===Mouse Click====
+  card.addEventListener('mousedown', () => {
+    timerId1 = setTimeout(() => {
+      markRed(card, index);
+    }, 1000);
+  });
+
+  card.addEventListener('mouseup', () => {
+    clearTimeout(timerId1)
+    console.log(index);
+  })
+
+  //===Touch====
+  card.addEventListener('touchstart', () => {
+    timerId1 = setTimeout(() => {
+      markRed(card, index);
+    }, 1000);
+  });
+
+  card.addEventListener('touchend', () => {
+    clearTimeout(timerId1)
+    console.log(index);
+  })
+
+});
 
 
 
