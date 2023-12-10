@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(67, 67, 67);
-  color: rgb(149, 149, 149);
+  color: rgb(203, 203, 203);
 }
 
 .winner__container::before {
@@ -75,11 +75,13 @@
   width: 100%;
   font-size: 17.5px;
   background-color: rgb(67, 67, 67);
-  color: rgb(149, 149, 149);
+  color: rgb(203, 203, 203);
   border-radius: 18px;
   box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   padding: 7px 7px 7px 12px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .participant-name {
@@ -92,6 +94,14 @@
   cursor: pointer;
   box-sizing: border-box;
   accent-color: rgb(170, 255, 0);
+}
+
+.is-card-marked {
+  /* background-color: rgb(255, 48, 48);
+  color: rgb(174, 174, 174); */
+  background-color: rgba(104, 104, 104, 0.1);
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.5);
+  color: rgb(146, 146, 146);
 }
 
 
@@ -107,7 +117,6 @@
   .card {
     font-size: 16.5px;
     border-radius: 18px;
-    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
   }
 
   .participant-name {
