@@ -107,9 +107,10 @@ cardEl.forEach((card, index) => {
   })
 
   //===Touch====
-  card.addEventListener('touchstart', () => {
+  card.addEventListener('touchstart', (event) => {
     timerId1 = setTimeout(() => {
       markRed(card, index);
+      event.preventDefault();
     }, 1000);
   });
 
