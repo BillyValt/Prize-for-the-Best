@@ -83,7 +83,7 @@ function pickPrize() {
 }
 
 function resetPrize() {
-  winnerNameEl.innerHTML = '&#9733;&#9733;&#9733;&#9733; &#9733;&#9733;&#9733;&#9733;';
+  winnerNameEl.innerHTML = '&#10053;&#10053;&#10053;&#10053;&#10053; &#10053;&#10053;&#10053;&#10053;&#10053;';
 
   resultEl.innerHTML =
     `
