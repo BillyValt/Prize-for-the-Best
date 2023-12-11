@@ -59,7 +59,7 @@ function pickWinner() {
 };
 
 function pickPrize() {
-  let randomPrizeNum = Math.floor(Math.random() * 8); //<==Prizes quantity adjustment
+  let randomPrizeNum = Math.floor(Math.random() * 9); //<==Prizes quantity adjustment
 
   resultImage.style.opacity = '0';
 
@@ -93,8 +93,8 @@ function resetPrize() {
     </div>
   `;
   winnerContainerEl.style.backgroundColor = 'white';
+
   console.log(resultImage.classList.contains('container__img'));
-  winnerContainerEl.classList.remove('winner__container__animation');
 }
 
 startButton.addEventListener('click', () => {
