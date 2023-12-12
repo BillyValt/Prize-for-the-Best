@@ -7,6 +7,7 @@ const winnerNameEl = document.querySelector('.js-winner-name');
 const winnerContainerEl = document.querySelector('.winner__container');
 const resultEl = document.querySelector('.result__container');
 const resultImage = document.querySelector('.container__img');
+const imageContainer = document.querySelector('.container__element');
 
 let savedDemoIsOn = JSON.parse(localStorage.getItem('setting'));
 
@@ -64,6 +65,13 @@ function pickPrize() {
   resultImage.style.opacity = '0';
 
   setTimeout(() => {
+    const copyResultImage = document.querySelector('.container__img');
+
+    copyResultImage.classList.add('prize-animation-disappearing');
+  }, 3500);
+
+
+  setTimeout(() => {
     resultEl.innerHTML = savedDemoIsOn ?
       `
       <div class="winner__incription">Подарок:</div>
@@ -73,14 +81,22 @@ function pickPrize() {
     ` : `
       <div class="winner__incription">Подарок:</div>
         <div class="container__element">
-        <img class="container__img" id="img-id-0" src="images/randomPrize6.png">
-      </div>
-  ` ;
+          <img class="container__img" id="img-id-0" src="images/randomPrize6.png">
+        </div>
+    ` ;
 
     winnerContainerEl.classList.add('winner__container__animation');
-  }, 4000);
+
+    const copyResultImage = document.querySelector('.container__img');
+
+    copyResultImage.classList.add('prize-animation');
+
+    console.log(copyResultImage.classList.contains('prize-animation'));
+  }, 4500);
 
 }
+
+resultImage.classList.add('prize-animation');
 
 function resetPrize() {
   winnerNameEl.innerHTML = '&#10053;&#10053;&#10053;&#10053;&#10053; &#10053;&#10053;&#10053;&#10053;&#10053;';
@@ -89,12 +105,13 @@ function resetPrize() {
     `
     <div class="winner__incription">Подарок:</div>
     <div class="container__element">
-      <img class="container__img" id="img-id-0" src="images/mystery__box1.png">
+      <img class="container__img js-prize-animation-disappearing" id="img-id-0" src="images/mystery__box1.png">
     </div>
   `;
   winnerContainerEl.style.backgroundColor = 'white';
 
-  console.log(resultImage.classList.contains('container__img'));
+  const copyResultImage = document.querySelector('.container__img');
+  copyResultImage.classList.add('prize-animation');
 }
 
 startButton.addEventListener('click', () => {
